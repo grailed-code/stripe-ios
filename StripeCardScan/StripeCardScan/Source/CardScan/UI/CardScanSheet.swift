@@ -11,7 +11,7 @@ import UIKit
 /// The result of an attempt to scan a card
 @frozen public enum CardScanSheetResult {
     /// The customer completed the scan
-    case completed(card: ScannedCard)
+    case completed(card: CreditCard)
 
     /// The customer canceled the scan
     case canceled
@@ -81,7 +81,6 @@ extension CardScanSheet: SimpleScanDelegate {
         _ scanViewController: SimpleScanViewController,
         creditCard: CreditCard
     ) {
-        let scannedCard = ScannedCard(pan: creditCard.number)
-        completion?(.completed(card: scannedCard))
+        completion?(.completed(card: creditCard))
     }
 }

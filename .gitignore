@@ -51,5 +51,6 @@ fastlane/.env
 .package.resolved
 Stripe.xcworkspace
 Stripe*/*.xcodeproj
+Stripe*/*.xcworkspace
 Example/**/*.xcodeproj
 Testers/**/*.xcodeproj
